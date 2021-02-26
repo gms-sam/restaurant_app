@@ -7,7 +7,7 @@ import 'package:restaurant_app/login/authentication_bloc/index.dart';
 import 'login/bloc_delegate.dart';
 import 'package:restaurant_app/user_repository.dart';
 import 'package:restaurant_app/screens/screens.dart';
-
+//jnkjnkjnkjn
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
