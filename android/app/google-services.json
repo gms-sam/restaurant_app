@@ -1,41 +1,108 @@
 {
   "project_info": {
-    "project_number": "515619719227",
-    "project_id": "flutter-app-780ea",
-    "storage_bucket": "flutter-app-780ea.appspot.com"
+    "project_number": "411496314698",
+    "firebase_url": "https://hotel-mitali.firebaseio.com",
+    "project_id": "hotel-mitali",
+    "storage_bucket": "hotel-mitali.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:515619719227:android:7df809bb70507edda0341e",
+        "mobilesdk_app_id": "1:411496314698:android:1c6f620447bdde018633b3",
         "android_client_info": {
-          "package_name": "com.example.flutter_app"
+          "package_name": "com.example.restaurant_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "515619719227-hvbhejden64evauhrhrh3taaas8jq6jo.apps.googleusercontent.com",
+          "client_id": "411496314698-ajrloc515okrr4o2k7ddu1its62vst7t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.flutter_app",
-            "certificate_hash": "ebb3e06cdd9d32fb44c78bcf960b543a8b8fbdcb"
+            "package_name": "com.example.restaurant_app",
+            "certificate_hash": "8cc9c8316c5e207b8a5605b44f9a9a79e2a3550f"
           }
         },
         {
-          "client_id": "515619719227-c6mba0l0hae5b2erugq67d3qc2cot6fl.apps.googleusercontent.com",
+          "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGWl_vUO0VNrFjgkdx57vAPgg-MqU5faY"
+          "current_key": "AIzaSyCLVo5IsHqdUT9Drqfi_lQ4Z4L5YMcfM4w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "515619719227-c6mba0l0hae5b2erugq67d3qc2cot6fl.apps.googleusercontent.com",
+              "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411496314698:android:de0973bc44cc637f8633b3",
+        "android_client_info": {
+          "package_name": "com.mitali.hotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411496314698-nt7f99p3bdg1ao46cvutqrvmcadfs669.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mitali.hotel",
+            "certificate_hash": "8cc9c8316c5e207b8a5605b44f9a9a79e2a3550f"
+          }
+        },
+        {
+          "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLVo5IsHqdUT9Drqfi_lQ4Z4L5YMcfM4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411496314698:android:baabcbcb0423ab7d8633b3",
+        "android_client_info": {
+          "package_name": "com.random.try"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLVo5IsHqdUT9Drqfi_lQ4Z4L5YMcfM4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411496314698-k0e7foio9c780airfl13503fdgrgk1oa.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -104,8 +104,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String passwordValid(String value) {
     RegExp _passwordRegExp = RegExp(
-    r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$',
-  );
+      r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$',
+    );
     if (value.isEmpty) {
       return "Please Enter your password";
     } else {
@@ -358,7 +358,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ? "Password can\'t be empty"
                 : value != _password
                     ? "Password does not match"
-                        : null,
+                    : null,
             obscureText: true,
             onSaved: (String value) => cpassword = value,
             onChanged: (password) {
