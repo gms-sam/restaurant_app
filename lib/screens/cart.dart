@@ -431,7 +431,7 @@ class _BottomSheetState extends State<BottomSheet> {
   showError() {
     showDialog(
         context: context,
-        child: Center(
+        builder: (context) => Center(
           child: AlertDialog(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),

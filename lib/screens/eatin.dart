@@ -141,7 +141,7 @@ class EatInState extends State<EatIn> {
   showError() {
     showDialog(
         context: context,
-        child: AlertDialog(
+        builder: (context)=> AlertDialog(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
           content: Container(
