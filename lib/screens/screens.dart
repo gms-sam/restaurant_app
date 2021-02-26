@@ -1,0 +1,10 @@
+export 'package:restaurant_app/screens/cart.dart';
+export 'package:restaurant_app/screens/contactus.dart';
+export 'package:restaurant_app/screens/detail.dart';
+export 'package:restaurant_app/screens/eatin.dart';
+export 'package:restaurant_app/screens/favorites.dart';
+export 'package:restaurant_app/screens/home.dart';
+export 'package:restaurant_app/screens/login.dart';
+export 'package:restaurant_app/screens/myorders.dart';
+export 'package:restaurant_app/screens/profile.dart';
+export 'package:restaurant_app/screens/takeout.dart';
