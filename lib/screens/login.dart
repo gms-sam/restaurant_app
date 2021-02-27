@@ -214,7 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return BoxDecoration(
       color: Colors.black.withOpacity(0.3),
       image: DecorationImage(
-        image: AssetImage("assets/bg.jpg"),
+        image: AssetImage("assets/moin.jpg"),
         fit: BoxFit.cover,
       ),
     );
@@ -433,7 +433,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: height / 60,
                             ),
                             Text(
-                              "Restaurant App",
+                              "Cake Point",
                               style: TextStyle(
                                   fontSize: 32,
                                   fontWeight: FontWeight.bold,

@@ -52,12 +52,12 @@ final List<String> categaryName = [
 ];
 
 final List<String> images = [
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fsnacks_and_breakfast.jpg?alt=media&token=153ad2a4-e14f-40d2-a993-64cfccd2a041',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fdosa_delights.jpg?alt=media&token=e2c050f6-886e-4953-b9fa-a31e6c93f3bd',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fsandwiches.jpg?alt=media&token=bb88620b-4ccd-4b6a-8224-c67a043b455d',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2FDrinks.jpg?alt=media&token=cc06d8b4-c457-44c3-b52a-e3f6b1043c58',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fthali.jpg?alt=media&token=d899d1b0-7287-482d-9440-b496d77262fe',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fpunjabi%20dishes.jpg?alt=media&token=c37016b0-c4d3-432e-bff5-26e64862710e',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_39E2eklYjxl-gjeORTW0LRfRX1DoRNsamw&usqp=CAU',
+  'https://images.app.goo.gl/B9XaSK5kaEbjCZJn6',
+  'https://images.app.goo.gl/uvSNk5T7GQkN9cw27',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0BvGAUKaoeK84CaDpGwjZ2-mu3KM9mOJHx_H_p1GMs4Se5BeB9IEOk_8&s=10',
+  'https://images.app.goo.gl/gobGEuoTsgUh5sGc9',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYTPqP_Fg0CCvae9OWTinLszULej9Ciee-Lw&usqp=CAU'
 ];
 
 class HomeScreen extends StatefulWidget {
