@@ -236,7 +236,7 @@ class HomeScreenState extends State<HomeScreen> {
                     crossAxisCount: 4,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 30,
-                    staggeredTileCount: 13,
+                    staggeredTileCount: 6,
                     staggeredTileBuilder: (int index) =>
                         new StaggeredTile.count(2, index.isEven ? 2 : 3),
                   ))),
