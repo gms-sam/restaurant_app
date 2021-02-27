@@ -43,19 +43,12 @@ class HomePage extends StatelessWidget {
 }
 
 final List<String> categaryName = [
-  "Snacks and Breakfast",
-  "Dosa Delights",
-  "Sandwiches",
-  "Drinks",
-  "Thali",
-  "Punjabi Dishes",
-  "Tandoori Hot",
-  "Raita and Papad",
-  "Basmati Khazana",
-  "Chinese Soup",
-  "Starters",
-  "Noodles and Rice",
-  "Juice and Lassi",
+  "Cake",
+  "Pasteries",
+  "Brownie",
+  "Cupcake",
+  "Ice Cream Cake",
+  "Fudge cake"
 ];
 
 final List<String> images = [
@@ -65,13 +58,6 @@ final List<String> images = [
   'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2FDrinks.jpg?alt=media&token=cc06d8b4-c457-44c3-b52a-e3f6b1043c58',
   'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fthali.jpg?alt=media&token=d899d1b0-7287-482d-9440-b496d77262fe',
   'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fpunjabi%20dishes.jpg?alt=media&token=c37016b0-c4d3-432e-bff5-26e64862710e',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Ftandoori_hot.jpg?alt=media&token=af726b59-289f-42ce-9126-3415c7930ad6',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fraita_and_papad.jpg?alt=media&token=54dbc203-e83c-461b-b3b9-142d12da08d0',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fbasmati_khazaana.jpg?alt=media&token=000f2f63-fc70-428b-ba7d-88058247a563',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fchineese_soup.jpg?alt=media&token=f058bb83-27f6-417b-8b71-d6c85eab2310',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fstarters.jpg?alt=media&token=5c281c10-3ab9-4f57-820e-36aeeb875287',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fnoddles_and_rice.jpg?alt=media&token=795ec9cb-a2fc-486d-9cc3-6dc16f302b74',
-  'https://firebasestorage.googleapis.com/v0/b/hotel-mitali.appspot.com/o/grid%2Fjuice_and_lassi.jpg?alt=media&token=826803f6-5807-4ee9-86ba-6512957a2464'
 ];
 
 class HomeScreen extends StatefulWidget {
@@ -193,7 +179,7 @@ class HomeScreenState extends State<HomeScreen> {
               expandedHeight: 150,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
-                title: Text('Welcome To Restaurant App'),
+                title: Text('Welcome to Cake Point'),
                 background: FoodNetworkImage(
                     'https://picturetherecipe.com/wp-content/uploads/2018/05/Vindaloo-by-PictureTheRecipe.jpg',
                     fit: BoxFit.cover),
