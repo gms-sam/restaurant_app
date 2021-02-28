@@ -52,11 +52,11 @@ final List<String> categaryName = [
 ];
 
 final List<String> images = [
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_39E2eklYjxl-gjeORTW0LRfRX1DoRNsamw&usqp=CAU',
-  'https://images.app.goo.gl/B9XaSK5kaEbjCZJn6',
-  'https://images.app.goo.gl/uvSNk5T7GQkN9cw27',
+  'https://i0.wp.com/www.janespatisserie.com/wp-content/uploads/2019/07/IMG_1216_1.jpg?resize=768%2C1152&ssl=1',
+  'https://5.imimg.com/data5/ZR/JQ/TK/IOS-15292022/chocolate-pastries-500x500.jpeg',
+  'https://www.recipetineats.com/wp-content/uploads/2016/08/Brownies_0.jpg',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0BvGAUKaoeK84CaDpGwjZ2-mu3KM9mOJHx_H_p1GMs4Se5BeB9IEOk_8&s=10',
-  'https://images.app.goo.gl/gobGEuoTsgUh5sGc9',
+  'https://i.pinimg.com/originals/48/cc/8f/48cc8f4c40e57b2d47804cd955dc7d68.jpg',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYTPqP_Fg0CCvae9OWTinLszULej9Ciee-Lw&usqp=CAU'
 ];
 
@@ -142,13 +142,12 @@ class HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: <Widget>[
               Expanded(
-                  child: FoodNetworkImage(images[index] /*%  images.length] */,
-                      fit: BoxFit.cover)),
+                  child: FoodNetworkImage(images[index], fit: BoxFit.cover)),
               SizedBox(
                 height: 10.0,
               ),
               Text(
-                categaryName[index % categaryName.length],
+                categaryName[index],
                 style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
@@ -180,9 +179,8 @@ class HomeScreenState extends State<HomeScreen> {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 title: Text('Welcome to Delicious Cake Shop'),
-                background: FoodNetworkImage(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_39E2eklYjxl-gjeORTW0LRfRX1DoRNsamw&usqp=CAU',
-                    fit: BoxFit.cover),
+                background: Image(
+                    image: AssetImage('assets/moin.jpg'), fit: BoxFit.cover),
               ),
               actions: <Widget>[
                 IconButton(

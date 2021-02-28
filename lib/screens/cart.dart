@@ -516,7 +516,7 @@ class _BottomSheetState extends State<BottomSheet> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: Text("Arrive at your time, Get the Food ready",
+                child: Text("Arrive at your time, Get the Cake ready",
                     style: TextStyle(color: Colors.deepOrange, fontSize: 25)),
               ),
               Padding(
@@ -551,7 +551,7 @@ class _BottomSheetState extends State<BottomSheet> {
               Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 20),
                 child: Text(
-                  "Food at your doorstep",
+                  "Cake at your doorstep",
                   style: TextStyle(color: Colors.deepOrange, fontSize: 25),
                 ),
               ),

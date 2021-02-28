@@ -141,26 +141,26 @@ class EatInState extends State<EatIn> {
   showError() {
     showDialog(
         context: context,
-        builder: (context)=> AlertDialog(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-          content: Container(
-              decoration: BoxDecoration(color: Colors.white),
-              child: Text(
-                "Please Select a Time",
-                style: TextStyle(color: Colors.black),
-              )),
-          actions: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.pop(context);
-                selectTime();
-              },
-              child: Text("Pick Time"),
-              splashColor: Colors.deepOrange,
-            )
-          ],
-        ));
+        builder: (context) => AlertDialog(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(22)),
+              content: Container(
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Text(
+                    "Please Select a Time",
+                    style: TextStyle(color: Colors.black),
+                  )),
+              actions: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    selectTime();
+                  },
+                  child: Text("Pick Time"),
+                  splashColor: Colors.deepOrange,
+                )
+              ],
+            ));
   }
 
   selectTime() {
@@ -233,7 +233,7 @@ class EatInState extends State<EatIn> {
                     borderRadius: BorderRadius.all(Radius.circular(13)),
                   ),
                   child: Text(
-                    "Arrive at your time,\nGet the Food ready",
+                    "Arrive at your time,\nGet the Cake ready",
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                 ),
@@ -293,61 +293,74 @@ class EatInState extends State<EatIn> {
                 padding: EdgeInsets.only(left: 15),
                 child: Row(
                   children: <Widget>[
-                    Column(children: [
-                      Text(
-                        'Order Name:',
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w400),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Quantity:",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w400),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Total Price:',
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w400),
-                      ),
-                    ]),
-                    SizedBox(
-                      width: 8,
-                    ),
                     Column(
-                      children: <Widget>[
-                        Text(widget.foodItem.title,
-                            style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w300)),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text((widget.quantity).toString(),
-                            style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w300)),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                            "₹${(int.parse(widget.foodItem.price) * widget.quantity)}"
-                                .toString(),
-                            style: TextStyle(
-                                color: Colors.deepOrange,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w300)),
-                      ],
-                    ),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                'Order Name:',
+                                style: TextStyle(
+                                    fontSize: 25, fontWeight: FontWeight.w400),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.4,
+                                child: Text(widget.foodItem.title,
+                                    style: TextStyle(
+                                        color: Colors.deepOrange,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w300)),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "Quantity:",
+                                style: TextStyle(
+                                    fontSize: 25, fontWeight: FontWeight.w400),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text((widget.quantity).toString(),
+                                  style: TextStyle(
+                                      color: Colors.deepOrange,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w300)),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                'Total Price:',
+                                style: TextStyle(
+                                    fontSize: 25, fontWeight: FontWeight.w400),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                  "₹${(int.parse(widget.foodItem.price) * widget.quantity)}"
+                                      .toString(),
+                                  style: TextStyle(
+                                      color: Colors.deepOrange,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w300)),
+                            ],
+                          ),
+                        ]),
                     SizedBox(
-                      width: 40,
+                      width: 10,
                     ),
                     Expanded(
                       child: Padding(

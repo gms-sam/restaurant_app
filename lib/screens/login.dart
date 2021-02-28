@@ -434,8 +434,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Text(
                               "Delicious Cake Shop",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: 32,
+                                  fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -472,7 +473,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Text(
             "We'll send an SMS message to verify your identity, please enter your number right below!",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 18, color: Colors.white),
           ),
         ),
         Padding(
@@ -485,6 +486,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   flex: 5,
                   child: TextField(
                     keyboardType: TextInputType.number,
+                    style: TextStyle(color: Colors.white),
                     controller: _phoneNumberController,
                     maxLength: 10,
                     onSubmitted: (text) {
@@ -526,7 +528,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Text(
               "Verification code",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.white),
             ),
           ),
           Padding(
@@ -539,6 +541,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Flexible(
                     flex: 5,
                     child: TextField(
+                      style: TextStyle(color: Colors.white),
                       keyboardType: TextInputType.number,
                       textAlign: TextAlign.center,
                       controller: _smsCodeController,
@@ -582,12 +585,12 @@ class _LoginScreenState extends State<LoginScreen> {
           textAlign: TextAlign.center,
           text: TextSpan(
             text: "If your code does not arrive in 1 minute, touch",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white),
             children: <TextSpan>[
               TextSpan(
                 text: " here",
                 style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ],
           ),
