@@ -433,7 +433,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: height / 60,
                             ),
                             Text(
-                              "Cake Point",
+                              "Delicious Cake Shop",
                               style: TextStyle(
                                   fontSize: 32,
                                   fontWeight: FontWeight.bold,

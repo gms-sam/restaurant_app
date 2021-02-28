@@ -179,9 +179,9 @@ class HomeScreenState extends State<HomeScreen> {
               expandedHeight: 150,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
-                title: Text('Welcome to Cake Point'),
+                title: Text('Welcome to Delicious Cake Shop'),
                 background: FoodNetworkImage(
-                    'https://picturetherecipe.com/wp-content/uploads/2018/05/Vindaloo-by-PictureTheRecipe.jpg',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_39E2eklYjxl-gjeORTW0LRfRX1DoRNsamw&usqp=CAU',
                     fit: BoxFit.cover),
               ),
               actions: <Widget>[

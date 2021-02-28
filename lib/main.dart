@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     User fuser = _userRepository.user;
     return MaterialApp(
-        title: 'Restaurant App',
+        title: 'Delicious Cake Shop',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             accentColor: Colors.deepOrange, primarySwatch: Colors.deepOrange),
