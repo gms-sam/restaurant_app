@@ -432,27 +432,27 @@ class _BottomSheetState extends State<BottomSheet> {
     showDialog(
         context: context,
         builder: (context) => Center(
-          child: AlertDialog(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
-            content: Container(
-                decoration: BoxDecoration(color: Colors.white),
-                child: Text(
-                  "Please Select a Time",
-                  style: TextStyle(color: Colors.black),
-                )),
-            actions: <Widget>[
-              FlatButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  selectTime();
-                },
-                child: Text("Pick Time"),
-                splashColor: Colors.deepOrange,
-              )
-            ],
-          ),
-        ));
+              child: AlertDialog(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(22)),
+                content: Container(
+                    decoration: BoxDecoration(color: Colors.white),
+                    child: Text(
+                      "Please Select a Time",
+                      style: TextStyle(color: Colors.black),
+                    )),
+                actions: <Widget>[
+                  FlatButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      selectTime();
+                    },
+                    child: Text("Pick Time"),
+                    splashColor: Colors.deepOrange,
+                  )
+                ],
+              ),
+            ));
   }
 
   selectTime() {
@@ -468,42 +468,42 @@ class _BottomSheetState extends State<BottomSheet> {
   var date = DateTime.now();
   void addtoDatabase() async {
     AppState.orders.addAll(AppState.cart);
-    User user =  getUser();
-     if (_currentIndex == 0) {
-        FirebaseFirestore.instance
-            .collection('users')
-            .doc(user.uid)
-            .update({"All Orders": AppState.orders});
-        return FirebaseFirestore.instance
-            .collection('users')
-            .doc(user.uid)
-            .collection('Order & Seat Reservation')
-            .doc(date.toString())
-            .set({
-          'Order List': AppState.cart,
-          'Order Name': AppState.cartwithName,
-          'Number of Seats': noOfSeats,
-          'Reservation Time': format,
-          'Number of Items': AppState.cart.length
-        });
-      } else {
-        FirebaseFirestore.instance
-            .collection('users')
-            .doc(user.uid)
-            .update({'address': address, "All Orders": AppState.cart});
-        return FirebaseFirestore.instance
-            .collection('users')
-            .doc(user.uid)
-            .collection('Order & Seat Reservation')
-            .doc(date.toString())
-            .set({
-          'Order List': AppState.cart,
-          'Order Name': AppState.cartwithName,
-          'Address': address,
-          'Phone': phone,
-          'Number of Items': AppState.cart.length
-        });
-      }
+    User user = getUser();
+    if (_currentIndex == 0) {
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .update({"All Orders": AppState.orders});
+      return FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .collection('Order & Seat Reservation')
+          .doc(date.toString())
+          .set({
+        'Order List': AppState.cart,
+        'Order Name': AppState.cartwithName,
+        'Number of Seats': noOfSeats,
+        'Reservation Time': format,
+        'Number of Items': AppState.cart.length
+      });
+    } else {
+      FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .update({'address': address, "All Orders": AppState.cart});
+      return FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .collection('Order & Seat Reservation')
+          .doc(date.toString())
+          .set({
+        'Order List': AppState.cart,
+        'Order Name': AppState.cartwithName,
+        'Address': address,
+        'Phone': phone,
+        'Number of Items': AppState.cart.length
+      });
+    }
   }
 
   List<Widget> bottomNav() {
@@ -521,8 +521,9 @@ class _BottomSheetState extends State<BottomSheet> {
               ),
               Padding(
                   padding: const EdgeInsets.only(left: 20, right: 20),
-                  child: NumberPicker.horizontal(
-                      initialValue: noOfSeats,
+                  child: NumberPicker(
+                      value: noOfSeats,
+                      axis: Axis.horizontal,
                       minValue: 1,
                       maxValue: 8,
                       onChanged: (value) => setState(() => noOfSeats = value))),

@@ -12,7 +12,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc({
     @required UserRepository userRepository,
   })  : assert(userRepository != null),
-        _userRepository = userRepository;
+        _userRepository = userRepository,
+        super(null);
 
   @override
   LoginState get initialState => LoginState.empty();
@@ -43,7 +44,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     yield LoginState.loading();
     try {
       await _userRepository.signInWithGoogle();
-      User user =  FirebaseAuth.instance.currentUser;
+      User user = FirebaseAuth.instance.currentUser;
       if (user.phoneNumber != null) {
         yield LoginState.success();
       } else {
@@ -64,12 +65,11 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     }
   }
 
-
   Stream<LoginState> _mapLoginWithSms({String sms}) async* {
     yield LoginState.loading();
     try {
       if (sms != null) {
-         _userRepository.submitSmsCode(sms);
+        _userRepository.submitSmsCode(sms);
         if (_userRepository.isSignInComplete) {
           yield LoginState.success();
         } else {

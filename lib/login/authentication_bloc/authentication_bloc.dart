@@ -6,14 +6,12 @@ import 'package:restaurant_app/login/authentication_bloc/index.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
-
-
   final UserRepository _userRepository;
 
-  
-  AuthenticationBloc({@required UserRepository userRepository})
+  AuthenticationBloc(UserRepository userRepository)
       : assert(userRepository != null),
-        _userRepository = userRepository;
+        _userRepository = userRepository, super(null);
+
   @override
   AuthenticationState get initialState => UnInitializedState();
   @override
@@ -27,7 +25,6 @@ class AuthenticationBloc
       yield* _mapLoggedOutToState();
     }
   }
-
 
   Stream<AuthenticationState> _mapAppStartedToState() async* {
     try {

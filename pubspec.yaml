@@ -11,22 +11,22 @@ dependencies:
   firebase_auth:
   google_sign_in:
   cloud_firestore:
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.3
   equatable:
   meta:
-  flutter_bloc: ^4.0.0
+  flutter_bloc: ^7.1.0
   firebase_core:
   cached_network_image:
   url_launcher:
-  smooth_star_rating: '1.0.2'
+  smooth_star_rating: ^1.1.1
   flutter_staggered_grid_view:
-  flutter_rating_bar: ^2.0.0+2
+  flutter_rating_bar: ^4.0.0
   bloc:
   intl:
   numberpicker:
   flutter_datetime_picker:
   bubble_tab_indicator:
-  flutter_launcher_icons: ^0.7.4
+  flutter_launcher_icons: ^0.9.1
 
 dev_dependencies:
   flutter_test:

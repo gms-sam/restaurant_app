@@ -18,7 +18,7 @@ getValues() async {
 }
 
 Future<List<String>> getOrder(doc) async {
-  DocumentSnapshot querySnapshot =
+  DocumentSnapshot<Map<String, dynamic>> querySnapshot =
       await FirebaseFirestore.instance.collection('users').doc(doc).get();
   if (querySnapshot.exists &&
       querySnapshot.data().containsKey('favorites') &&
@@ -30,7 +30,7 @@ Future<List<String>> getOrder(doc) async {
 }
 
 Future<List<String>> getFavorites(doc) async {
-  DocumentSnapshot querySnapshot =
+  DocumentSnapshot<Map<String, dynamic>> querySnapshot =
       await FirebaseFirestore.instance.collection('users').doc(doc).get();
   if (querySnapshot.exists &&
       querySnapshot.data().containsKey('favorites') &&
@@ -47,7 +47,7 @@ Future updateFavorites(String uid, String foodItemId) async {
   AppState.favorites = favorites;
   DocumentReference favoritesReference =
       FirebaseFirestore.instance.collection('users').doc(uid);
-  DocumentSnapshot snapshot = await favoritesReference.get();
+  DocumentSnapshot<Map<String, dynamic>> snapshot = await favoritesReference.get();
   return FirebaseFirestore.instance.runTransaction((Transaction tx) async {
     if (snapshot.exists) {
       if (!snapshot.data()['favorites'].contains(foodItemId)) {

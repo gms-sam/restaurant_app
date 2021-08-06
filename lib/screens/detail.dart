@@ -182,7 +182,7 @@ class _DetailScreenState extends State<DetailScreen>
                       margin: EdgeInsets.only(top: 5, bottom: 20),
                       child: SmoothStarRating(
                         allowHalfRating: true,
-                        onRatingChanged: (v) {
+                        onRated: (v) {
                           changeRating(v);
                         },
                         starCount: 5,

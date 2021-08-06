@@ -71,7 +71,7 @@ class MyOrdersState extends State<MyOrders> {
   }
 
   Future<List<String>> getOrders(doc) async {
-    DocumentSnapshot querySnapshot =
+    DocumentSnapshot<Map<String, dynamic>> querySnapshot =
         await FirebaseFirestore.instance.collection('users').doc(doc).get();
     if (querySnapshot.exists &&
         querySnapshot.data().containsKey('All Orders') &&

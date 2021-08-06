@@ -7,16 +7,14 @@ import 'package:restaurant_app/login/authentication_bloc/index.dart';
 import 'login/bloc_delegate.dart';
 import 'package:restaurant_app/user_repository.dart';
 import 'package:restaurant_app/screens/screens.dart';
-//jnkjnkjnkjn
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   final UserRepository userRepository = UserRepository();
   User user = userRepository.user;
-  BlocSupervisor.delegate = SimpleBlocDelegate(); 
   runApp(BlocProvider(
-    create: (context) =>
-        AuthenticationBloc(userRepository: userRepository)..add(AppStarted()),
+    create: (context) => AuthenticationBloc(userRepository)..add(AppStarted()),
     child: MyApp(
       userRepository: userRepository,
       user: user,
@@ -25,7 +23,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final UserRepository _userRepository; 
+  final UserRepository _userRepository;
   MyApp({Key key, @required UserRepository userRepository, User user})
       : assert(userRepository != null),
         _userRepository = userRepository,

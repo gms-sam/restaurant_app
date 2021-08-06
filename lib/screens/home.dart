@@ -108,7 +108,7 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<List<String>> getFavorites(doc) async {
-    DocumentSnapshot querySnapshot =
+    DocumentSnapshot<Map<String, dynamic>> querySnapshot =
         await FirebaseFirestore.instance.collection('users').doc(doc).get();
     if (querySnapshot.exists &&
         querySnapshot.data().containsKey('favorites') &&
@@ -120,7 +120,7 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<List<String>> getOrders(doc) async {
-    DocumentSnapshot querySnapshot =
+    DocumentSnapshot<Map<String, dynamic>> querySnapshot =
         await FirebaseFirestore.instance.collection('users').doc(doc).get();
     if (querySnapshot.exists &&
         querySnapshot.data().containsKey('All Orders') &&

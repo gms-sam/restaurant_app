@@ -26,7 +26,7 @@ class ProfilePageState extends State<ProfilePage> {
     
     super.initState();
    user =  currentUser();
-   DocumentReference df = FirebaseFirestore.instance.collection('users').doc(user.uid);
+   DocumentReference<Map<String, dynamic>> df = FirebaseFirestore.instance.collection('users').doc(user.uid);
       df.get().then((ds){
         setState(() {
           address=ds.data()['address'];

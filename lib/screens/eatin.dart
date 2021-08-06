@@ -226,7 +226,6 @@ class EatInState extends State<EatIn> {
                 padding: EdgeInsets.only(left: 10),
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                  //color: Colors.deepOrange,
                   decoration: BoxDecoration(
                     color: Colors.deepOrange,
                     shape: BoxShape.rectangle,
@@ -244,14 +243,13 @@ class EatInState extends State<EatIn> {
               Center(
                 child: Column(
                   children: <Widget>[
-                    NumberPicker.horizontal(
-                        listViewHeight: 50,
-                        highlightSelectedValue: true,
+                    NumberPicker(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.deepOrange),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
-                        initialValue: noOfPersons,
+                        value: noOfPersons,
+                        axis: Axis.horizontal,
                         minValue: 1,
                         maxValue: 8,
                         onChanged: (newValue) =>
